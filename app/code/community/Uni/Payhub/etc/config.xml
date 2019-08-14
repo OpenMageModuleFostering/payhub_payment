@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Unicode Systems
+ * @category   Uni
+ * @package    Uni_Payhub
+ * @copyright  Copyright (c) 2010-2011 Unicode Systems. (http://www.unicodesystems.in)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+
+<config>
+    <modules>
+        <Uni_Payhub>
+            <version>0.1.0</version>
+        </Uni_Payhub>
+    </modules>
+    <frontend>
+        <routers>
+            <payhub>
+                <use>standard</use>
+                <args>
+                    <module>Uni_Payhub</module>
+                    <frontName>payhub</frontName>
+                </args>
+            </payhub>
+        </routers>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <before_save_payment_custom>
+                        <class>payhub/standard</class>
+                        <method>beforeSavePaymentCustom</method>
+                    </before_save_payment_custom>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+        <layout>
+            <updates>
+                <payhub>
+                    <file>payhub.xml</file>
+                </payhub>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <payhub>
+                <class>Uni_Payhub_Model</class>
+            </payhub>
+        </models>
+        <helpers>
+            <payhub>
+                <class>Uni_Payhub_Helper</class>
+            </payhub>
+        </helpers>
+        <blocks>
+            <payhub>
+                <class>Uni_Payhub_Block</class>
+            </payhub>
+        </blocks>
+        <payment>
+            <cc>
+                <types>
+                    <AE>
+                        <code>AE</code>
+                        <name>American Express</name>
+                        <order>0</order>
+                    </AE>
+                    <VI>
+                        <code>VI</code>
+                        <name>Visa</name>
+                        <order>10</order>
+                    </VI>
+                    <MC>
+                        <code>MC</code>
+                        <name>Master Card</name>
+                        <order>20</order>
+                    </MC>
+                    <DI>
+                        <code>DI</code>
+                        <name>Discover</name>
+                        <order>30</order>
+                    </DI>
+                    <SM>
+                        <code>SM</code>
+                        <name>Maestro/Switch</name>
+                        <order>40</order>
+                    </SM>
+                    <SO>
+                        <code>SO</code>
+                        <name>Solo</name>
+                        <order>45</order>
+                    </SO>
+                    <JCB>
+                        <code>JCB</code>
+                        <name>JCB</name>
+                        <order>50</order>
+                    </JCB>
+                    <OT>
+                        <code>OT</code>
+                        <name>Other</name>
+                        <order>1000</order>
+                    </OT>
+                </types>
+            </cc>
+        </payment>
+    </global>
+    <default>
+        <payment>
+            <payhub>
+                <model>payhub/standard</model>
+                <active>1</active>
+                <demo>1</demo>
+                <orgid><![CDATA[1234]]></orgid>
+                <order_status><![CDATA[pending]]></order_status>
+                <title><![CDATA[Payhub]]></title>
+                <allowspecific>0</allowspecific>
+                <cctypes><![CDATA[AE,VI,MC,DI]]></cctypes>
+                <payment_action>sale</payment_action>
+                <allowspecific>0</allowspecific>
+                <sort_order></sort_order>
+            </payhub>
+        </payment>
+    </default>
+</config>

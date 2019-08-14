@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Payhub_Payment",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "This extension allows merchant to receive payment through payhub payment gateway.",
+    "authors": [
+    {
+        "name": "Unicode Systems",
+        "email": "magento@unicodesystems.in"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

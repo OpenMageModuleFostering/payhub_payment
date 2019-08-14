@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Payhub_Payment</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension allows merchant to receive payment through payhub payment gateway.</summary>
+    <description>This extension allows merchant to receive payment through payhub payment gateway.&#xD;
+&#xD;
+Demo mode also available. In this extension.</description>
+    <notes>This is first release.</notes>
+    <authors><author><name>Unicode Systems</name><user>Unicode_Systems</user><email>magento@unicodesystems.in</email></author></authors>
+    <date>2014-10-20</date>
+    <time>06:43:00</time>
+    <contents><target name="magecommunity"><dir name="Uni"><dir name="Payhub"><dir name="Block"><dir name="Form"><file name="Payhub.php" hash="e8305c2d2344e63856478d808c9f5b8d"/></dir><dir name="Info"><file name="Payhub.php" hash="362613b04d7a474dda40d2474727155c"/></dir></dir><dir name="Helper"><file name="Data.php" hash="3dec2186251649b659f9a1dd0258b729"/></dir><dir name="Model"><file name="Standard.php" hash="15fa03c8295c2957c3996c802cf126c5"/></dir><dir name="controllers"><file name="PaymentController.php" hash="e623057c689138ac04a0be6c7575ea28"/></dir><dir name="etc"><file name="adminhtml.xml" hash="cc0b954191622ca59328ff1363ffeee6"/><file name="config.xml" hash="a12baa970004518091146467f6df3305"/><file name="system.xml" hash="52b3b8bc7b1ca589b385858f9fc6c8b2"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Uni_Payhub.xml" hash="64154654faffbc78bdc12ba702091b9d"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="payhub.xml" hash="2f7230d1c0f17566580fcaa518fc3d5c"/></dir><dir name="template"><dir name="payhub"><file name="processing.phtml" hash="339a7ca4c4acec32b172f87c6b5e28bd"/><file name="redirect.phtml" hash="e517cd8dfae4d8e0afd7db2a507f2cf8"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.8.1.0</max></package><extension><name>gd</name><min>2.0.28</min><max>3.0</max></extension></required></dependencies>
+</package>
